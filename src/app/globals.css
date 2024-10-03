@@ -2,26 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+/* Slider styles */
+.slider {
+  position: relative;
+  max-width: 60%; /* Full width of the container */
+  margin: auto;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.slides {
+  display: flex;
+  transition: transform 0.7s ease;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.slide img {
+  width: 1000px; /* Full width of the slide */
+  height: 600px; /* Maintain aspect ratio */
+  display: block;
 }
+
